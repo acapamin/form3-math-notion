@@ -1,3 +1,4 @@
+import React from 'react';
 import { useStore } from '../../store/useStore';
 
 interface HeadingProps {
@@ -14,7 +15,7 @@ export default function Heading({ level, children }: HeadingProps) {
     3: 'text-2xl font-semibold mt-4 mb-2',
   };
 
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${level}` as 'h1' | 'h2' | 'h3';
 
   return (
     <Tag className={`${styles[level]} ${darkMode ? 'text-notion-text-dark' : 'text-notion-text'}`}>
