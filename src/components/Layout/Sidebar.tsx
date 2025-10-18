@@ -1,4 +1,4 @@
-import { ChevronRight, Book, Calculator, CreditCard, Home } from 'lucide-react';
+import { ChevronRight, Book, Calculator, CreditCard, Home, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { useStore } from '../../store/useStore';
 
@@ -29,6 +29,11 @@ const sidebarItems: SidebarItem[] = [
         id: 'credit-debt',
         title: '3.2 Credit & Debt',
         icon: <CreditCard className="w-4 h-4" />,
+      },
+      {
+        id: 'exam-quiz',
+        title: '📝 Exam Questions',
+        icon: <FileText className="w-4 h-4" />,
       },
     ],
   },

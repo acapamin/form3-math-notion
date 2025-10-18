@@ -5,6 +5,7 @@ import Topbar from './components/Layout/Topbar';
 import Home from './pages/Home';
 import SavingsInvestments from './pages/SavingsInvestments';
 import CreditDebt from './pages/CreditDebt';
+import ExamQuiz from './pages/ExamQuiz';
 
 function App() {
   const { currentPageId, darkMode } = useStore();
@@ -25,6 +26,8 @@ function App() {
         return <SavingsInvestments />;
       case 'credit-debt':
         return <CreditDebt />;
+      case 'exam-quiz':
+        return <ExamQuiz />;
       default:
         return <Home />;
     }

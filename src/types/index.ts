@@ -6,6 +6,26 @@ export interface QuizQuestion {
   explanation: string;
 }
 
+export interface ExamQuestionOption {
+  text: string;
+  rationale: string;
+}
+
+export interface ExamQuestion {
+  id: number;
+  question: string;
+  hint: string;
+  correctAnswer: string;
+  options: ExamQuestionOption[];
+  difficulty: 'easy' | 'medium' | 'hard';
+}
+
+export interface ExamAnswer {
+  questionId: number;
+  selectedOption: number;
+  isCorrect: boolean;
+}
+
 export type BlockType =
   | 'heading1'
   | 'heading2'
